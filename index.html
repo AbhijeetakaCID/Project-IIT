@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DSA Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="center-screen">
+    <div class="container">
+      <h1>STACK'D</h1>
+
+      <div class="task-form">
+        <input type="text" id="taskName" placeholder="Task Name" />
+        <input type="date" id="taskDate" />
+        <input type="time" id="taskTime" step="60" />
+        <select id="taskPriority">
+          <option>High</option>
+          <option>Medium</option>
+          <option>Low</option>
+        </select>
+        <select id="taskCategory">
+          <option value="Academi">Academi</option>
+          <option value="Personal">Personal</option>
+          <option value="Self Growth">Self Growth</option>
+          <option value="Friends">Friends</option>
+          <option value="Family">Family</option>
+          <option value="Youths">Youths</option>
+        </select>
+        <button onclick="addTask()">Add Task</button>
+      </div>
+
+      <div class="sort-controls">
+        <button onclick="sortTasks('id')">Sort by ID</button>
+        <button onclick="sortTasks('date')">Sort by Due Date</button>
+        <button onclick="sortTasks('priority')">Sort by Priority</button>
+      </div>
+
+      <div class="sort-info">
+        <strong>Sort By:</strong> <span id="currentSort">ID 🔢</span>
+      </div>
+
+      <ul id="taskList"></ul>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
